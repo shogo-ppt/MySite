@@ -5,10 +5,8 @@
 }
 
 body {
-    font-family: monospace;
-}
-
-ul {
+    background: var(--bg);
+    color: var(--fontColor);
     font-family: Helvetica;
 }
 
@@ -20,11 +18,12 @@ li {
     list-style: square;
 }
 
-#msg {
-    font-family: monospace;
+.light-theme {
+    --bg: var(--green);
+    --fontColor: var(--black);
 }
 
-.light-theme {
-    color: #000000;
-    background: #00FF00;
+.dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--green);
 }
