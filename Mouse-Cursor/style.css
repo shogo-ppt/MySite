@@ -1,0 +1,23 @@
+* {
+    cursor: none;
+    line-height: 1.6;
+}
+
+#custom-cursor {
+    display: none;
+    background-color: rgb(0 0 0 / 0.5);
+    width: 2rem;
+    height: 2rem;
+    border-radius: calc(infinity * 1px);
+    position: fixed;
+    pointer-events: none;
+    transition: transform 100ms ease-out, width 100ms ease-out, border-radius 100ms ease-out;
+    transform-origin: center;
+}
+
+.container {
+    background-color: #f0f0f0;
+    width: 100dvw;
+    height: 100dvh;
+    padding: 2rem;
+}
