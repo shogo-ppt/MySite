@@ -34,4 +34,19 @@ document.querySelectorAll('a').forEach(function(element) {
   });
 });
 
+document.querySelectorAll('h1, p').forEach(function(element) {
+  element.addEventListener('mouseover', function() {
+    const rect = this.getBoundingClientRect();
+    cursor.style.borderRadius = '1px';
+    cursor.style.transform = `translateX(${adjustCursorPosition})`;
+    cursor.style.width = `2px`;
+    cursor.style.height = `${rect.height}px`;
+  });
 
+  element.addEventListener('mouseout', function() {
+    cursor.style.borderRadius = 'calc(infinity * 1px)';
+    cursor.style.transform = `translateX(0)`;
+    cursor.style.width = defaultCursorSize;
+    cursor.style.height = defaultCursorSize;
+  });
+});
